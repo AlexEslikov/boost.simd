@@ -56,7 +56,7 @@ set(NS_CMAKE_PROJECT_OPTIONS
   CMAKE_ARGS "-DBOOST_ROOT=${BOOST_HEADER_ONLY_DESTINATION}/include"
 )
 if (DEFINED USE_SELF_BOOST)
-  set(BOOST_HEADER_ONLY_GIT_TAG develop)
+  set(BOOST_HEADER_ONLY_GIT_TAG 1.61)
   NS_project_include(boost-header-only)
   set(Boost_INCLUDE_DIRS ${BOOST_HEADER_ONLY_DESTINATION}/include)
 endif()
@@ -67,7 +67,7 @@ set(NS_CMAKE_PROJECT_OPTIONS
 )
 
 if (DEFINED DEV)
-  set(NS_BENCH_GIT_TAG develop)
+  set(NS_BENCH_GIT_TAG 1.61)
   set(BRIGAND_GIT_TAG 1.2.0)
   NS_project_include(ns.bench.standalone)
   NS_project_include(brigand.standalone)
